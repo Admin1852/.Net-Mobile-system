@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+    .menu ul
+    {
+        border-bottom:1px solid gray;
+    }
+    .menu ul li
+    {
+        border:3px solid white;
+        background-color:Gray;
+        text-decoration:none;
+        padding:05px;
+        margin:5px;
+    }
+    .menu ul li a 
+    {
+        color:White;
+    }
+    .menu ul li a:hover
+    {
+        font-weight:bold;
+        font-size:x-large;
+    }    
+    
+    
+        .style1
+        {
+            font-size: x-large;
+            color: #66FFFF;
+        }
+    
+    
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body background="nightsky.gif">
+    <form id="form1" runat="server">
+    <div><table align="center"><tr><td align="center">
+    <table width="100%" align="center"><tr><td align="center">
+            <span class="style1" 
+                style="font-family: &quot;Times New Roman&quot;; mso-ascii-font-family: &quot;Times New Roman&quot;; mso-fareast-font-family: +mj-ea; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-color-index: 1; mso-font-kerning: 12.0pt; language: en-US; font-weight: bold">
+            <br />
+            Mobile&nbsp; Rating System<br />
+            </span><br />
+            </td></tr></table>
+    <asp:Menu ID="menuowner" runat="server" Orientation="Horizontal" Width="1300px" 
+            StaticMenuItemStyle-HorizontalPadding="50px" ForeColor="#CC0066" 
+            style="font-weight: 700; font-size: large">
+                <DynamicItemTemplate>
+                    <%# Eval("Text") %>
+                </DynamicItemTemplate>
+            <Items>
+            <asp:MenuItem Text="Home" NavigateUrl="~/adminhome.aspx"></asp:MenuItem>
+             <asp:MenuItem Text="User" NavigateUrl="~/user details.aspx"></asp:MenuItem>
+             <asp:MenuItem Text="Application Holder" NavigateUrl="~/company details.aspx"></asp:MenuItem>
+             <asp:MenuItem Text="Update New Field" NavigateUrl="~/new field.aspx"></asp:MenuItem>
+             <asp:MenuItem Text="Clustering" NavigateUrl="~/cluster.aspx"></asp:MenuItem>
+             <asp:MenuItem Text="Log Out" NavigateUrl="~/login.aspx"></asp:MenuItem>
+            </Items>
+
+<StaticMenuItemStyle HorizontalPadding="50px" BorderStyle="Solid"></StaticMenuItemStyle>
+            </asp:Menu>
+    
+    </td></tr></table>
+    
+
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
