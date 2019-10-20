@@ -114,7 +114,15 @@
                             ID="lbnew" runat="server" Text="Click Here" PostBackUrl="~/userreg.aspx" 
                             style="color: #000066" ></asp:LinkButton>
                     </td>
-                </tr>  </table>
+                </tr>  
+        
+        <td align="center" colspan="2" class="style20">
+                        <strong><span class="style6">Forget Password
+                        <img src="Photo/Blink.gif" style="height: 14px; width: 32px" />&nbsp; </span></strong><asp:LinkButton 
+                            ID="lbnew" runat="server" Text="Click Here" PostBackUrl="~/Review.aspx" 
+                            style="color: #000066" ></asp:LinkButton>
+                    </td>
+                </tr> </table>
 
     </form>
 </body>
